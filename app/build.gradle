@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.xposedmoduledemo'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.xposedmoduledemo"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+     //   testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.1.25'
+
+    compileOnly 'de.robv.android.xposed:api:82'
+//    compileOnly 'de.robv.android.xposed:api:82:sources'
+
+    // https://mvnrepository.com/artifact/com.koushikdutta.async/androidasync
+    implementation group: 'com.koushikdutta.async', name: 'androidasync', version: '2.0.1'
+
+
+}
