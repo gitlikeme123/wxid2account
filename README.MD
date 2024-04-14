@@ -3,6 +3,9 @@ Android xposed
 微信：8.0.27
 用法：127.0.0.1:8989/get_contact?wx_id=xxx
 
+#### 转wxid方法失效
+#### 新增Android免root加wxid好友，Android 12 10测试无问题
+
 # Ⅳ. 免责声明（非常重要！！！！！！！）
 
 ### 1. 使用目的
